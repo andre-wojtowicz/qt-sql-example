@@ -1,4 +1,4 @@
-# QT SQL Example
+# Qt SQL Example
 
 An exemplary Qt app that connects to SQL server and displays a table from a database. The program was made for educational purposes.
 
