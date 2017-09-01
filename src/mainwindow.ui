@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>690</width>
+    <height>483</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>690</width>
+    <height>483</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Qt SQL Example</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/icons.qrc">
+    <normaloff>:/icons/database.ico</normaloff>:/icons/database.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QGroupBox" name="groupBox_sql_drivers">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>Qt SQL database drivers</string>
+        </property>
+        <widget class="QLabel" name="label_qmysql_icon">
+         <property name="geometry">
+          <rect>
+           <x>53</x>
+           <y>23</y>
+           <width>13</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="../res/icons.qrc">:/icons/failure.ico</pixmap>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_qodbc_icon">
+         <property name="geometry">
+          <rect>
+           <x>143</x>
+           <y>23</y>
+           <width>13</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="../res/icons.qrc">:/icons/failure.ico</pixmap>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>73</x>
+           <y>22</y>
+           <width>47</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>QMYSQL</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>163</x>
+           <y>22</y>
+           <width>47</width>
+           <height>13</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>QODBC</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_sql_connect">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>390</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="title">
+         <string>Connect to server</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <widget class="QGroupBox" name="groupBox_authentication">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>175</y>
+           <width>231</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Authentication</string>
+         </property>
+         <widget class="QLineEdit" name="lineEdit_login">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>54</y>
+            <width>131</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radio_sql_authentication">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>24</y>
+            <width>151</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>SQL Server authentication</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radio_windows_authentication">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>114</y>
+            <width>141</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Windows authentication</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_password">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>84</y>
+            <width>131</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>54</y>
+            <width>51</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>login:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>84</y>
+            <width>61</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>password:</string>
+          </property>
+         </widget>
+         <zorder>lineEdit_login</zorder>
+         <zorder>radio_sql_authentication</zorder>
+         <zorder>radio_windows_authentication</zorder>
+         <zorder>lineEdit_password</zorder>
+         <zorder>label</zorder>
+         <zorder>label_2</zorder>
+         <zorder>groupBox_sql_drivers</zorder>
+        </widget>
+        <widget class="QPushButton" name="button_connect">
+         <property name="geometry">
+          <rect>
+           <x>88</x>
+           <y>356</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Connect</string>
+         </property>
+         <property name="autoDefault">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>115</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>server:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_server_address">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>115</y>
+           <width>141</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_database_name">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>326</y>
+           <width>141</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>326</y>
+           <width>81</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>database name:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>145</y>
+           <width>51</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>port:</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox_server_port">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>145</y>
+           <width>61</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Default: MySQL 3306; MSSQL 1433</string>
+         </property>
+         <property name="maximum">
+          <number>65535</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>85</y>
+           <width>41</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>driver:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_driver">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>85</y>
+           <width>141</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>For ODBC/MSSQL: &quot;SQL Server&quot; (Windows), &quot;ODBC Driver 13 for SQL Server&quot;, &quot;FreeTDS&quot; (unix), etc.</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_engine">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>231</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Engine</string>
+         </property>
+         <widget class="QRadioButton" name="radio_mssql">
+          <property name="geometry">
+           <rect>
+            <x>135</x>
+            <y>20</y>
+            <width>82</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>MSSQL</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="radio_mysql">
+          <property name="geometry">
+           <rect>
+            <x>45</x>
+            <y>20</y>
+            <width>82</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>MySQL</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_database_browser">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>300</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Database browser</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="1">
+        <widget class="QComboBox" name="comboBox_table_name">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="sizeIncrement">
+          <size>
+           <width>130</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="button_show_table">
+         <property name="text">
+          <string>Show</string>
+         </property>
+         <property name="autoDefault">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>table:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="4">
+        <widget class="QTableView" name="tableView_database_table"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>radio_mysql</tabstop>
+  <tabstop>radio_mssql</tabstop>
+  <tabstop>lineEdit_driver</tabstop>
+  <tabstop>lineEdit_server_address</tabstop>
+  <tabstop>spinBox_server_port</tabstop>
+  <tabstop>radio_sql_authentication</tabstop>
+  <tabstop>lineEdit_login</tabstop>
+  <tabstop>lineEdit_password</tabstop>
+  <tabstop>radio_windows_authentication</tabstop>
+  <tabstop>lineEdit_database_name</tabstop>
+  <tabstop>button_connect</tabstop>
+  <tabstop>comboBox_table_name</tabstop>
+  <tabstop>button_show_table</tabstop>
+  <tabstop>tableView_database_table</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../res/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

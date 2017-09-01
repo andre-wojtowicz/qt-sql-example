@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>database.ico</file>
+        <file>failure.ico</file>
+        <file>success.ico</file>
+    </qresource>
+</RCC>
