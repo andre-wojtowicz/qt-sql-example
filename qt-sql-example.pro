@@ -1,4 +1,4 @@
-VERSION = 1.0
+VERSION = 1.1
 QMAKE_TARGET_DESCRIPTION = "Qt app that displays SQL table; for educational purposes"
 QMAKE_TARGET_COPYRIGHT   = "Andrzej Wojtowicz, Adam Mickiewicz University in Poznan"
 QMAKE_TARGET_PRODUCT     = "Qt SQL Example"

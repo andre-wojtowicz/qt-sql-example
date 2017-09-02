@@ -63,7 +63,7 @@ MainWindow::MainWindow(QWidget* parent, DbController* dbc, QThread* dbt) :
     QFileInfo check_file(inifile);
     if (check_file.exists() && check_file.isFile())
     {
-        QSettings settings(inifile, QSettings::Format::IniFormat);
+        QSettings settings(inifile, QSettings::IniFormat);
 
         QString engine = settings.value("sql/engine", "").toString();
         if (engine == "mysql")
