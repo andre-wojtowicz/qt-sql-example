@@ -48,7 +48,7 @@
          </size>
         </property>
         <property name="title">
-         <string>Qt SQL database drivers</string>
+         <string>Qt SQL database driver plugins</string>
         </property>
         <widget class="QLabel" name="label_qmysql_icon">
          <property name="geometry">

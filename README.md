@@ -14,17 +14,17 @@ The program reads `config.ini` on startup. The file must be located in the app w
 
 ## SQL database drivers
 
-A comprehensive discussion about SQL database drivers can be found in [Qt Documentation](https://doc.qt.io/qt-5/sql-driver.html).
+A comprehensive discussion about SQL database drivers (Qt driver plugins as well as system drivers) can be found in [Qt Documentation](https://doc.qt.io/qt-5/sql-driver.html).
 
 ### Windows 10
 
-* Both Qt driver plugins should be already bundled with Qt SDK.
+* Both Qt SQL driver plugins should be already bundled with Qt SDK.
 * System ODBC driver should be already bundled with Windows.
 * System MySQL driver can be *installed* by placing `libmysql.dll` from [C API for MySQL (mysqlclient)](https://dev.mysql.com/downloads/connector/c/) in the app working directory.
 
 ### Ubuntu 16.04
 
-Packages with Qt driver plugins and system SQL manager with drivers:
+Packages with Qt driver plugins and system SQL drivers:
 
 * MySQL - `libqt5sql5-mysql` `libmysqlclient20`,
 * MSSQL/ODBC - `libqt5sql5-odbc` `libodbc1` `odbcinst` `unixodbc` `msodbcsql`__*__.
