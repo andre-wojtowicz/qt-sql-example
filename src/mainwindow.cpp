@@ -166,6 +166,8 @@ void MainWindow::disconnectFromServerRequested()
 {
     ui->button_connect->setEnabled(false);
 
+    delete ui->tableView_database_table->model();
+
     emit disconnectFromServer();
 }
 
@@ -196,6 +198,8 @@ void MainWindow::engineChanged()
 void MainWindow::showTableRequested()
 {
     ui->button_show_table->setEnabled(false);
+
+    delete ui->tableView_database_table->model(); // remove old model
 
     QString table_name = ui->comboBox_table_name->currentText();
 
