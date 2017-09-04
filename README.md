@@ -2,21 +2,24 @@
 
 An exemplary [Qt](https://www.qt.io/) app that connects to SQL server and displays a table from a database. The program was made for educational purposes.
 
-Compiled Windows and Linux applications can be downloaded from [Releases](https://github.com/andre-wojtowicz/qt-sql-example/releases).
+Compiled Windows and Linux applications with statically-linked libraries can be downloaded from [Releases](https://github.com/andre-wojtowicz/qt-sql-example/releases).
 
 ![](screenshot.png)
 
-The program was tested on: 
- * clients: Windows 10 with Qt 5.9.1, Ubuntu 16.04 with Qt 5.5.1, 
- * servers: MySQL Server 5.5.57, Microsoft SQL Server 2008 R2 SP3.
+The application is developed with Qt 5.9.1 on Windows 10 and Ubuntu 16.04.
+The program was tested on MySQL Server 5.5.57 and Microsoft SQL Server 2008 R2 SP3.
 
 ## Client config
 
-The program reads `config.ini` on startup. The file must be located in the app working directory.
+The program reads `config.ini` on startup. The file must be in the app working directory.
 
 ## SQL database drivers
 
 A comprehensive discussion about SQL database drivers (Qt driver plugins as well as system drivers) can be found in [Qt Documentation](https://doc.qt.io/qt-5/sql-driver.html). MSSQL is handled by the ODBC driver.
+
+Although binaries of the program have statically-linked libraries, in order to connect from Linux to MSSQL server, one should install ODBC SQL Server driver (e.g. `msodbcsql`__*__).
+
+The following section covers the essential tools to develop app with dynamically-linked SQL libraries.
 
 ### Windows 10
 
