@@ -2,7 +2,7 @@
 
 An exemplary [Qt](https://www.qt.io/) app that connects to SQL server and displays a table from a database. The program was made for educational purposes.
 
-A compiled Windows application can be downloaded from [Releases](https://github.com/andre-wojtowicz/qt-sql-example/releases).
+Compiled Windows and Linux applications can be downloaded from [Releases](https://github.com/andre-wojtowicz/qt-sql-example/releases).
 
 ![](screenshot.png)
 
