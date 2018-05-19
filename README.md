@@ -17,7 +17,7 @@ The program reads `config.ini` on startup. The file must be in the app working d
 
 A comprehensive discussion about SQL database drivers (Qt driver plugins as well as system drivers) can be found in [Qt Documentation](https://doc.qt.io/qt-5/sql-driver.html). MSSQL is handled by the ODBC driver.
 
-Although binaries of the program have statically-linked libraries, in order to connect from Linux to MSSQL server, one should install ODBC SQL Server driver (e.g. `msodbcsql`__*__).
+Although binaries of the program have statically-linked libraries, in order to connect from Linux to MSSQL server, one should install ODBC SQL Server driver (e.g. `msodbcsql17`__*__).
 
 The following section covers the essential tools to develop app with dynamically-linked SQL libraries.
 
@@ -32,6 +32,6 @@ The following section covers the essential tools to develop app with dynamically
 Packages with Qt driver plugins and system SQL drivers:
 
 * MySQL - `libqt5sql5-mysql` `libmysqlclient20`,
-* ODBC ([unixODBC Driver Manager](http://www.unixodbc.org) and Microsoft ODBC Driver) - `libqt5sql5-odbc` `libodbc1` `unixodbc` `odbcinst` `msodbcsql`__*__.
+* ODBC ([unixODBC Driver Manager](http://www.unixodbc.org) and Microsoft ODBC Driver) - `libqt5sql5-odbc` `libodbc1` `unixodbc` `odbcinst` `msodbcsql17`__*__.
 
-__*__ How to install `msodbcsql` - [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server).
+__*__ How to install `msodbcsql17` - [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server).
